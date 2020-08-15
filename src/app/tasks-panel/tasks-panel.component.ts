@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import tasks from "../tasks";
 
 @Component({
-  selector: 'app-tasks-panel',
-  templateUrl: './tasks-panel.component.html',
-  styleUrls: ['./tasks-panel.component.css']
+  selector: "app-tasks-panel",
+  templateUrl: "./tasks-panel.component.html",
+  styleUrls: ["./tasks-panel.component.css"],
 })
 export class TasksPanelComponent implements OnInit {
-
-  constructor() { }
+  tasks = [];
+  constructor() {}
 
   ngOnInit() {
+    this.tasks = tasks;
   }
-
 }
